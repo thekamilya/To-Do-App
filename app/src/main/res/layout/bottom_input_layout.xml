@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    >
+    <EditText
+        android:id="@+id/task_et"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="@android:color/transparent"
+        android:hint="Write your task"
+        android:textSize="14dp"
+        android:fontFamily="@font/plus_jakarta_sans_wght"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        >
+
+    </EditText>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/task_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/choose_date"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/grey"
+            android:fontFamily="@font/plus_jakarta_sans_wght"
+            android:text="Today"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="12dp"
+
+            app:cornerRadius="10dp"
+            app:icon="@drawable/calendar"
+            app:iconGravity="textStart"
+            app:iconTint="#737070"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></Button>
+
+        <Button
+            android:id="@+id/choose_status"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/grey"
+            android:fontFamily="@font/plus_jakarta_sans_wght"
+            android:text="No list"
+            android:textSize="12dp"
+            android:textColor="@color/cardview_dark_background"
+            app:cornerRadius="10dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@id/choose_date"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/green"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/send"
+            app:iconGravity="top"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

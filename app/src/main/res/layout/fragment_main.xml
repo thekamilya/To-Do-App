@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment">
+
+        <Toolbar
+            android:id="@+id/top_menu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:titleTextColor="#FEFAFD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <ImageView
+
+
+                            android:id="@+id/imageView"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/round"
+                            app:srcCompat="@android:drawable/ic_menu_camera"
+                            android:padding="8dp">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/greeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="@font/plus_jakarta_sans_wght"
+                            android:text="@string/good_morning"
+                            android:textSize="20sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/delete_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/icons8_delete"
+                    tools:layout_editor_absoluteX="343dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:visibility="gone">
+
+                </ImageView>
+
+        </Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingEnd="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_menu"
+            tools:listitem="@layout/top_list_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+            android:background="@drawable/half_transparent_left_background"
+            android:layout_width="70dp"
+            android:layout_height="85dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_menu"
+            >
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:background="@drawable/half_transparent_right_background"
+            android:layout_width="70dp"
+            android:layout_height="85dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_menu"
+            >
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="408dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="164dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/main_list_item"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottom_menu">
+                
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <View
+            android:layout_gravity="top"
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/main_recycler_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottom_menu"/>
+
+       <Toolbar
+           android:id="@+id/bottom_menu"
+           android:layout_width="match_parent"
+           android:layout_height="88dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:background="@color/white"
+           >
+
+
+               <ImageView
+                   android:padding="12dp"
+                   android:id="@+id/menu"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:src="@drawable/menu"
+                   tools:layout_editor_absoluteX="16dp"
+                   tools:layout_editor_absoluteY="32dp">
+
+               </ImageView>
+
+               <ImageView
+                   android:padding="12dp"
+                   android:id="@+id/search"
+                   android:layout_width="48dp"
+                   android:layout_height="48dp"
+                   android:src="@drawable/search_normal"
+                   android:layout_marginStart="24dp"
+                   tools:layout_editor_absoluteX="16dp"
+                   tools:layout_editor_absoluteY="32dp">
+
+               </ImageView>
+
+               <Button
+                   android:id="@+id/save_btn"
+                   android:layout_width="56dp"
+                   android:layout_height="56dp"
+                   android:layout_gravity="end"
+                   android:backgroundTint="@color/green"
+                   android:fontFamily="@font/plus_jakarta_sans_wght"
+                   android:text="+"
+                   android:layout_marginEnd="16dp"
+                   app:cornerRadius="14dp"
+                   tools:layout_editor_absoluteX="339dp"
+                   tools:layout_editor_absoluteY="16dp">
+
+               </Button>
+
+
+       </Toolbar>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
